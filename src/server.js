@@ -22,39 +22,47 @@ app.listen(port,()=>{
   console.log(`alive on ${port}`)
 })
 
-app.get('/', (req, res) => {
+app.get('/data', (req, res) => {
   res.json([
     {
         bar1: 'Croc Lounge',
         hours1: '12:00 PM - 7:00 PM EVERYDAY​',
         deals1:'$4 Coors Light, $5 Well Drinks, $6 High Life + Whiskey, Tecate + Tequila',
+        votes1: 0
     },
     {
         bar2: 'The Globe',
         hours2: '4:00 PM - 07:00 PM',
         deals2: '$5 draft and bottled beers; $5 well drinks',
+        votes2: 0
 
     },
     {
         bar3: 'Gramercy Ale House',
         hours3: 'mon-fri 2pm - 7pm | sat 11am - 7pm | sun 12pm - 7pm',
+        votes3: 0
+
     },
     {
         bar4: 'The Gem Saloon',
         hours4: '04:00 PM - 08:00 PM EVERYDAY​',
         deals4: 'almost 1/2 off on beers, wines, cocktails(excluding Specialty Cocktails)',
+        votes4: 0
 
     },
     {
         bar5: 'Bar 13',
         hours5: '04:00 PM - 08:00 PM EVERYDAY​',
         deals5: '2 for 1 bud light, $6 well drinks, $6 seasonal wine',
+        votes5: 0
 
     },
     {
         bar6: 'Reservoir',
         hours6: '4:00 PM - 7:00 PM',
         deals6: '$4 well drinks, $5 Absolut',
+        votes6: 0
+
     },
     {
         bar7: 'Fitzgeralds',
@@ -63,11 +71,15 @@ app.get('/', (req, res) => {
                  $5 Coney Island Mermaid Pilsner, Red Hook IPA, Shocktop, Bud Light, Blue Point Toasted Lager​
                  $6 Sam Adams Seasonal, Goose Island IPA, Blue Moon
                  $7 Well Drinks`,
+        votes7: 0
+
     },
     {
         bar8: 'Side Bar',
         hours8: '12pm -7pm EVERYDAY​',
         deals8:'2 for 1 Drinks, $7 Wine',
+        votes8: 0
+
 
     },
 
