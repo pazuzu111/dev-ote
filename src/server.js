@@ -14,7 +14,13 @@ app.use(logger('dev'))
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({extended:false}))
 
+app.use(express.static('public'))
+
 //static config
+const port = process.env.PORT || 3001;
+app.listen(port,()=>{
+  console.log(`alive on ${port}`)
+})
 
 app.get('/', (req, res) => {
   res.json([
