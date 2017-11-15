@@ -45,11 +45,10 @@ componentDidMount() {
     //  $.getJSON("https://api.ipify.org/?format=json", function(e) {
     // console.log(e.ip);
     // ips.p
- this.interval = setInterval(this.getData, 1000);
-
-
+    this.interval = setInterval(this.getData, 500);
 }
 
+//clear so we dont have data leaks
 componentWillUnmount() {
   clearInterval(this.interval);
 }
