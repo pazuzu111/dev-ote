@@ -1,14 +1,15 @@
-import React, { Component } from 'react';
+import React from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
 import './App.css';
 
-export default class VoteResult extends Component {
-  render() {
+const VoteResult = props => {
     return (
         <div className="voteResult">
-            <h1>{this.props.result}</h1>
-            <h3>{this.props.name}</h3>
+            <h1>{props.result}</h1>
+            <h4>{props.name}</h4>
         </div>
     );
-  }
+
 }
+
+export default VoteResult ;
