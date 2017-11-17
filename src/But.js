@@ -3,8 +3,8 @@ import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 import "./App.css";
 
 class But extends React.Component {
-    constructor() {
-    super();
+    constructor(props) {
+    super(props);
         this.state = {
             modal: false
         };
@@ -24,7 +24,7 @@ class But extends React.Component {
                 <a className="buttons" onClick={this.toggle}> {this.props.name} </a>
 
                 <Modal isOpen={this.state.modal} toggle={this.toggle} className={this.props.className}>
-                    <ModalHeader toggle={this.toggle}> {this.props.name} </ModalHeader>
+                    <ModalHeader toggle={this.toggle}> {this.props.name} - {this.props.address}</ModalHeader>
 
                     <ModalBody>
                          <h4>{this.props.hours}</h4>
@@ -32,7 +32,10 @@ class But extends React.Component {
                     </ModalBody>
 
                     <ModalFooter>
-                    <Button color="secondary" color="danger" onClick={this.props.handleClick} disabled={this.props.voted}>Vote</Button>
+                    <Button color="secondary" color="danger"
+                            onClick={this.props.handleClick}
+                            disabled={this.props.voted}>Vote
+                    </Button>
                     </ModalFooter>
                 </Modal>
             </div>

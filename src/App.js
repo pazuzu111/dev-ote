@@ -4,7 +4,7 @@ import But from './But.js'
 import axios from 'axios'
 import './App.css';
 // import { findDOMNode } from 'react-dom';
-import $ from 'jquery';
+// import $ from 'jquery';
 
 
 //START
@@ -25,10 +25,11 @@ export default class App extends Component {
 
     // let ips = [];
   }
+//****errorUnhandled Rejection (SyntaxError): Unexpected token < in JSON at position 0
 
 //fetch data
 getData(){
-    fetch('http://localhost:3001/data')
+    fetch('https://votedata.herokuapp.com/data')
       .then(res => res.json())
       .then(res => {
 
@@ -45,7 +46,7 @@ componentDidMount() {
     //  $.getJSON("https://api.ipify.org/?format=json", function(e) {
     // console.log(e.ip);
     // ips.p
-    this.interval = setInterval(this.getData, 500);
+    this.interval = setInterval(this.getData, 3000);
 }
 
 //clear so we dont have data leaks
@@ -61,7 +62,7 @@ handleClick = (vote, id) => {
     })
     console.log('vote', id);
 
-    let url = `http://localhost:3001/data/${id}`
+    let url = `https://votedata.herokuapp.com/data/${id}`
 
     //PUT request
     axios.put(url)
@@ -90,6 +91,7 @@ handleClick = (vote, id) => {
                                 //output buttons to dom
                                 <But key={i} handleClick={()=> this.handleClick(x.votes, x.name)}
                                 name={x.name}
+                                address={x.address}
                                 hours={x.hours}
                                 deals={x.deals}
                                 voted={this.state.voted}
