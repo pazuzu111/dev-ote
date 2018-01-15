@@ -132,15 +132,19 @@ app.get('/data', (req, res) => {
 app.put('/data/:id', (req, res) => {
     let index;
 
+    //no id so must find bar by name and set equal to req.params.id
     let result = bars.find((bar, i) => {
-        index = i;
-       return bar.name === req.params.id
+      index = i;
+      return bar.name === req.params.id
     })
     // console.log(req.params)
 
     console.log(bars[index],index, result)
+
+    //increment the result
     bars[index].votes++;
 
+    //respond with json
     res.json(result);
 });
 

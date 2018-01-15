@@ -2,9 +2,11 @@ import React, { Component } from 'react';
 import Vote from './Vote.js'
 import But from './But.js'
 import axios from 'axios'
+// import Chart from './Chart.js';
+// import {Bar} from 'react-chartjs-2'
+
 import './App.css';
 // import { findDOMNode } from 'react-dom';
-// import $ from 'jquery';
 
 
 //START
@@ -14,14 +16,12 @@ export default class App extends Component {
 
     //initialize state
     this.state = ({
-
         bars:[],
         voted: false
     });
 
     //bind handlers
     this.handleClick = this.handleClick.bind(this);
-    this.getData = this.getData.bind(this);
 
     // let ips = [];
   }
@@ -32,12 +32,10 @@ getData(){
     fetch('https://votedata.herokuapp.com/data')
       .then(res => res.json())
       .then(res => {
-
         this.setState({
             bars:res,
-
         })
-    })
+      })
 }
 
 //on mount
@@ -53,7 +51,8 @@ componentDidMount() {
 componentWillUnmount() {
   clearInterval(this.interval);
 }
-// onClick setState - increment vote trip flag
+
+// onClick setState - increment vote, trip flag
 handleClick = (vote, id) => {
 
     //trip flag to disable vote
@@ -111,6 +110,7 @@ handleClick = (vote, id) => {
                     <p>Loading...</p>
                     }
                     </div>
+
                 </div>
             </div>
         </div>

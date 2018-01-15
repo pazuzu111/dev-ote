@@ -5,10 +5,12 @@
   "dependencies": {
     "axios": "^0.17.0",
     "bootstrap": "^4.0.0-beta",
+    "chart.js": "^2.7.1",
     "cors": "^2.8.4",
     "express": "^4.16.2",
     "jquery": "^3.2.1",
     "react": "^16.0.0",
+    "react-chartjs-2": "^2.6.4",
     "react-dom": "^16.0.0",
     "react-scripts": "1.0.17",
     "reactstrap": "^5.0.0-alpha.3",
@@ -33,6 +35,5 @@
     "webpack": "^3.8.1",
     "webpack-dev-server": "^2.9.4"
   },
-    "proxy": "http://localhost:3001"
-
+  "proxy": "http://localhost:3001"
 }
