@@ -2,7 +2,6 @@
   margin:0;
 }
 
-
 body,
 html {
   padding: 0;
@@ -165,9 +164,7 @@ z-index:-1;
   margin-left: 4px;
 }
 
-
-
-
+/**********************************/
 .result{
     display:flex;
     flex-direction:row;

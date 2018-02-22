@@ -8,7 +8,7 @@ const VoteResult = props => {
             <h1>{props.result}</h1>
             <h4>{props.name}</h4>
         </div>
-    );
+    )
 }
 
 export default VoteResult ;

@@ -120,7 +120,7 @@ if (process.env.NODE_ENV === 'production') {
 
 //static config
 const port = process.env.PORT || 3001;
-app.listen(port,()=>{
+app.listen(port,() => {
   console.log(`alive on ${port}`)
 })
 
