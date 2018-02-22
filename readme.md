@@ -14,7 +14,8 @@ click vote, sit back and watch the votes increment in real time
 - bar graph for results
 
 # inner workings
-1 user lands on page 
-2 browser makes request to external api to receive infomation about bars(mayb take a few seconds for data to be sent back due to heroku app not being used so much, so the dyno falls a sleep and becomes slow with a response 
-3 when user clicks on vote, they make a put request to update the number of votes a bar has 
-4 server responds with new incremented value
+1) user lands on page 
+2) browser makes request to external api to receive infomation about bars(mayb take a few seconds 
+   data to be sent back due to heroku app not being used so much, so the dyno falls a sleep and becomes slow with a response 
+3) when user clicks on vote, they make a put request to update the number of votes a bar has 
+4) server responds with new incremented value
