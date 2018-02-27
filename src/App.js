@@ -86,15 +86,15 @@ export default class App extends Component {
                                 />
                             )
                         })
-                    :
-                    <p>Loading...</p>
+                        :
+                        <p>Loading...</p>
 
     let voteResults = this.state.bars ?
                         this.state.bars.map((x, i) => {
                             return (<Vote key={i} result={this.state.bars[i].votes} name={this.state.bars[i].name} />)
                         })
-                    :
-                    <p>Loading...</p>
+                        :
+                        <p>Loading...</p>
     return (
         <div>
             <div className="App">
@@ -103,7 +103,6 @@ export default class App extends Component {
                     <div className="result">
                         {voteResults}
                     </div>
-
                 </div>
             </div>
         </div>
